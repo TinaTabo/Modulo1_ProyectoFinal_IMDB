@@ -1,5 +1,6 @@
-//-- Importar modulos para lectura/escritura de fichero.
+//-- Importar modulos.
 import { writeFileSync,readFileSync } from "fs";
+import "colors";
 
 //-- Importar clases
 import { Professional } from "./professional";
@@ -34,7 +35,18 @@ console.log(imdbJSON);
 
 //-- Guardar imbdJSON en un fichero JSON
 function saveFile(){
-    console.log(`-----------Creando-Fichero-JSON--------------`);
+    console.log(`-----------Creando-Fichero-JSON--------------`.red);
     writeFileSync("imdbBBDD.json",imdbJSON);
+    console.log(`------Fichero-JSON-Creado-Correctamente------`.blue);
 }
 saveFile();
+
+//-- Leer el fichero imdbBBDD.json y almacenarlo en una instancia de la clase Imdb.
+function readFile() {
+    let imdbData = readFileSync("./imdbBBDD.json");
+    //-- Pasar los datos obtenidos a formato JSON.
+    let imdb = JSON.parse(imdbData.toString());
+    console.log(`-----------Leyendo-Fichero-JSON--------------`.yellow);
+    console.log(imdb);
+}
+readFile();
