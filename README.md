@@ -13,5 +13,5 @@ Proyecto final del modulo 1 del Bootcamp de Codenotch.
 - finaltest.ts
 
 ## Archivos de bases de datos
-- imdbBBDD.json
-- imdbBBDD_2.json
+- imdbBBDD.json: Base de datos inicial.
+- imdbBBDD_2.json: Base de datos modificada despues de añadir un nuevo profesional a una película.
