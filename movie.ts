@@ -30,10 +30,31 @@ export class Movie{
     printAttributes():void{
         console.log(`Title = ${this.title}`);
         console.log(`Release Year = ${this.releaseYear}`);
-        console.log(`Actors = ${this.actors}`);
+        console.log(`Actors = `);
+        if (this.actors == undefined) {
+            console.log(`Actors = ${this.actors}`);
+        }else{
+            for (let i = 0; i < this.actors.length; i++) {
+                console.log(`------ACTOR-${i+1}-----`);
+                this.actors[i].printAttributes();
+                console.log(`---------------------`);
+            }
+        }
         console.log(`Nacionality = ${this.nacionality}`);
-        console.log(`Director = ${this.director}`);
-        console.log(`Writer = ${this.writer}`);
+        if (this.director == undefined) {
+            console.log(`Director = ${this.director}`);
+        }else{
+            console.log(`------DIRECTOR------`);
+            this.director.printAttributes();
+            console.log(`--------------------`);
+        }
+        if (this.writer == undefined) {
+            console.log(`Writer = ${this.writer}`);
+        }else{
+            console.log(`-------WRITTER------`);
+            this.writer.printAttributes();
+            console.log(`--------------------`);
+        }
         console.log(`Language = ${this.language}`);
         console.log(`Plataforma = ${this.plataforma}`);
         console.log(`Is MCU = ${this.isMCU}`);
