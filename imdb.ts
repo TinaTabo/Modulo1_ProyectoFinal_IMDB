@@ -1,3 +1,6 @@
+//-- Importar módulos para lectura/escritura de ficheros.
+
+
 //-- Importar clases
 import { Movie } from "./movie";
 

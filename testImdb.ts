@@ -1,4 +1,6 @@
-//-- Importar clases
+//-- Importar modulos para lectura/escritura de fichero.
+
+
 //-- Importar clases
 import { Professional } from "./professional";
 import { Movie } from "./movie";
@@ -6,7 +8,6 @@ import { Imdb } from "./imdb";
 import { peli } from "./testMovie";
 
 //-- Pruebas
-
 //-- Crear otra ficha de una pelicula.
 let peli2:Movie = new Movie("Shrek",2001,"American","Animation");
 peli2.actors = [
@@ -26,4 +27,10 @@ peli2.distributor = "DreamWorks";
 //-- Crear base de datos de pelicular utilizando la clase imdb.
 let pelis:Movie[] = [peli,peli2];
 let imdb:Imdb = new Imdb(pelis);
-console.log(imdb);
+
+//-- Convertir imdb a una cadena de texto JSON --> string JSON
+let imdbJSON:string = JSON.stringify(imdb);
+console.log(imdbJSON);
+
+//-- Guardar imbdJSON en un fichero JSON
+
