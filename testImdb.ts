@@ -1,4 +1,4 @@
-//-- Importar modulos.
+//-- Importar modulos
 import { writeFileSync,readFileSync } from "fs";
 import "colors";
 
@@ -43,7 +43,7 @@ saveFile();
 
 //-- Leer el fichero imdbBBDD.json y almacenarlo en una instancia de la clase Imdb.
 function readFile() {
-    let imdbData = readFileSync("./imdbBBDD.json");
+    let imdbData = readFileSync("imdbBBDD.json");
     //-- Pasar los datos obtenidos a formato JSON.
     let imdb = JSON.parse(imdbData.toString());
     console.log(`-----------Leyendo-Fichero-JSON--------------`.yellow);
