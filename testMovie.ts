@@ -29,3 +29,5 @@ console.log(`-------------------------------------`);
 peli.printAttributes();
 console.log(`-------------------------------------`);
 
+//-- Exportar peli
+export {peli};
