@@ -1,5 +1,5 @@
 //-- Importar modulos para lectura/escritura de fichero.
-
+import { writeFileSync,readFileSync } from "fs";
 
 //-- Importar clases
 import { Professional } from "./professional";
@@ -33,4 +33,8 @@ let imdbJSON:string = JSON.stringify(imdb);
 console.log(imdbJSON);
 
 //-- Guardar imbdJSON en un fichero JSON
-
+function saveFile(){
+    console.log(`-----------Creando-Fichero-JSON--------------`);
+    writeFileSync("imdbBBDD.json",imdbJSON);
+}
+saveFile();
