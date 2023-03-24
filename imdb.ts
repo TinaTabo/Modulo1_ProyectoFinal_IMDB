@@ -30,6 +30,6 @@ export class Imdb{
         //-- Pasar los datos obtenidos a formato JSON.
         let imdb = JSON.parse(imdbData.toString());
         console.log(`-----------Leyendo-Fichero-JSON--------------`.yellow);
-        return new Imdb(imdb);
+        return imdb;
     }
 }

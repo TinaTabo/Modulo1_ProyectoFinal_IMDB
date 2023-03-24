@@ -50,3 +50,6 @@ function readFile() {
     console.log(imdb);
 }
 readFile();
+
+//-- Exportar base de datos y peli2
+export {imdb, peli2};
